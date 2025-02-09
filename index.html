@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Generator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jsTree CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Prompt Generator</h1>
+    <!-- Section: Create New Prefab -->
+    <section id="parentSection">
+      <h2>Create New Prefab</h2>
+      <label for="prefabName">Prefab Name:</label>
+      <input type="text" id="prefabName" placeholder="Enter prefab name">
+      <!-- The dropdown has been removed; instead, we only use the hidden field -->
+      <input type="hidden" id="parentPrefabId">
+      <button type="button" id="savePrefabBtn">Save Prefab</button>
+      <button type="button" id="updatePrefabBtn">Update Prefab</button>
+    </section>
+    <!-- Section: Existing Prefabs in TreeView -->
+    <section id="prefabSection">
+      <h2>Existing Prefabs</h2>
+      <div id="prefabTree"></div>
+      <div class="prefab-buttons">
+        <button type="button" id="applyPrefabBtn">Apply Prefab</button>
+        <button type="button" id="deletePrefabBtn">Delete Prefab</button>
+      </div>
+    </section>
+    <!-- Section: Options (collapsible, grouped by category) -->
+    <section id="optionsSection">
+      <h2>Options</h2>
+      <div id="optionsContainer">
+        <!-- Dynamically loaded options will appear here -->
+      </div>
+    </section>
+    <!-- Section: Generated Prompt -->
+    <section id="promptSection">
+      <h2>Generated Prompt</h2>
+      <textarea id="promptOutput" readonly></textarea>
+      <button type="button" id="generatePromptBtn">Generate Prompt</button>
+    </section>
+  </div>
+  <!-- jQuery for jsTree -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jsTree JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
